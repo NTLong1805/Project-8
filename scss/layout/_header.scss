@@ -1,0 +1,104 @@
+@use "../abstracts";
+
+.header{
+    background-color: var(--header-bg-color);
+    @include abstracts.breakpoint(sm){
+        background-color: #fff;
+    }
+}
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+%flexItemCenter{
+    display: flex;
+    align-items: center;
+}
+.top-bar{
+    @extend %flexItemCenter;
+
+    &__more{
+        display: none;
+
+        @include abstracts.breakpoint(lg){
+            display: block;
+        }
+    }
+}
+.navbar{
+    margin-left: 144px;
+   
+    @include abstracts.breakpoint(xl){
+        margin-left: 30px;
+    }
+    @include abstracts.breakpoint(lg){
+        display: none;
+    }
+
+    &__list{
+        @extend %flexItemCenter;
+        gap: 30px;
+    }
+    &__link{
+        color: var(--text-color, #1A162E);
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+        display: flex;
+        gap: 6px;
+    }
+    &__arrow{
+        margin-top: 3px;
+    }
+}
+.top-act{
+    @extend %flexItemCenter;
+    margin-left: auto;
+    gap: 20px;
+
+    &__group{
+        @extend %flexItemCenter;
+
+        min-width: 50px;
+        height: 50px;
+
+        border-radius: 8px;
+        background: var(--top-act-group-bg-color);
+        box-shadow: 0 20px 60px 10px var(--top-act-group-shadow);
+        @include abstracts.breakpoint(md){
+            display: none;
+        }
+    }
+    &__group-single{
+        @include abstracts.breakpoint(lg){
+            display: none;
+        }
+    }
+    &__group-single &__btn{
+        padding: 13px;
+    }
+    &__btn{
+        padding: 13px 20px;
+
+        @extend %flexItemCenter;
+        gap: 10px;
+        cursor: pointer;
+    }
+    &__label{
+        color: var(--text-color, #1A162E);
+
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+    }
+    &__seperate{
+        width: 1px;
+        height: 30px;
+        background-color: var(--top-act-group-seperate);
+    }
+    &__user{
+        margin-top: 8px;
+        cursor: pointer;
+    }
+}
