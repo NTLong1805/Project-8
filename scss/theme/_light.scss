@@ -8,7 +8,7 @@
     --top-act-group-bg-color:#fff;
     --top-act-group-shadow:rgba(237, 237, 246, 0.20);
     --top-act-group-seperate:#ededf6;
-    @include abstracts.breakpoint(lg){
+    @include abstracts.screen(lg){
         --header-bg-color:#fff;
         --header-shadow-color:rgba(237,237,246,0.2);
     }
@@ -21,4 +21,19 @@
     // side bar
     --sidebar-bg:#fff;
     --sidebar-shadow:0 40px 90px 20px rgba(200, 200, 200, 0.40);
+
+    // Category browse
+    --cate-item-bg:#eee;
+    --cate-item__thumb-bg:#fff;
+    --cate-item__heading-color:#000;
+    @include abstracts.screen(md){
+        --cate-item-bg:#fff;
+    }
+
+    // Button
+    --btn-filter-color:#6C6C72;
+    --btn-filter-bg:#fff;
+    // Product Item
+    --product-item-bg:#fff;
+    --product-item-color:#1A162E;
 }

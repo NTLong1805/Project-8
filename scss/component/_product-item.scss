@@ -1,0 +1,61 @@
+@use "../abstracts";
+
+.product-item{
+    display: flex;
+    flex-direction: column;
+    // width: 312px;
+    padding: 16px;
+    align-items: flex-start;
+    row-gap: 16px;
+    border-radius: 20px;
+    background: var(--product-item-bg);
+    box-shadow: 0 20px 60px 10px rgba(0, 0, 0, 0.20);
+
+    &__img-wrap{
+        width: 100%;
+        position: relative;
+        padding-top: 100%;
+    }
+    &__thumb{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__heading,&__type,&__num{
+        color: var(--product-item-color);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5; /* 150% */
+    }
+    &__heading{
+        
+        margin-top: 16px;
+    }
+    &__type{
+        margin: 16px 0;
+        color: #9E9DA8;
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__rate{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.5; /* 150% */
+    }
+    &__like-btn{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
