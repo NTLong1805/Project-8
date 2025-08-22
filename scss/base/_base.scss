@@ -13,6 +13,7 @@ body{
     font-size: 1.6rem;
     font-family: Gordita,sans-serif;
     color: var(--text-color);
+    background-color: var(--body-bg);
 }
 a{
     text-decoration: none;
@@ -23,9 +24,10 @@ button{
     outline: none;
     background:transparent;
 }
-button,input,textarea,select{
+button,input,textarea,select,a,img{
     font-family: inherit;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 .icon{
     filter: var(--icon-color);
